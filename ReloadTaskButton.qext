@@ -1,0 +1,9 @@
+{
+    "name": "Reload Task Button",
+    "description": "",
+    "type": "visualization",
+    "preview": "images/reload_btn.png",
+    "version": "0.1",
+    "author": "EMARK",
+    "src": "/extensions/ReloadTaskButton/images/reload_btn.png"
+}
