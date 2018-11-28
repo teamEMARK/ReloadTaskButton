@@ -11,3 +11,5 @@ Configuration:
   - Refresh interval in ms - interval for reload task status check
   - Task ID - if field is clear, taskId is detected automatically 
   - Waiting to finish reload - application is waiting in "idle" state when reload start if setting is checked
+
+See also Reload Task Status https://github.com/teamEMARK/ReloadTaskStatus
