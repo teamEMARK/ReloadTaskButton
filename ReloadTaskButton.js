@@ -122,13 +122,13 @@ define(["jquery", "qlik", "text!./ReloadTaskButton.css", "text!./template.html",
 								type: "boolean",
 								label: "Waiting to finish reload",
 								defaultValue: true,
-								expresiion: "optional"
+								expression: "optional"
 						},						
                         TaskProp : {
                             ref : "pTask",
                             type : "string",
                             label : "Task id",
-                            expresiion : "optional"
+                            expression : "optional"
                         }
                     }
                 }
