@@ -27,6 +27,15 @@
 			<button ng-click="closeModal()" class="btn btn-danger">Close</button>
 		</div>
 	</div>
+	<div class="modal-content" ng-if="showStarted">
+		<div class="modal-message">
+			<h2>Reload started</h2>
+		</div>
+		<br>
+		<div class="modal-message">
+			<button ng-click="closeModal()" class="btn btn-success">Close</button>
+		</div>
+	</div>
 	<div class="modal-content" ng-if="showSuccess">
 		<div class="modal-message">
 			<h2>Reload succeeded!</h2>

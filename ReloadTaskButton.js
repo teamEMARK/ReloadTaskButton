@@ -23,7 +23,6 @@ define(["jquery", "qlik", "text!./ReloadTaskButton.css", "text!./template.html",
             var appId = app.id;
 			var appName = "";
             var refreshInterval = $scope.layout.pRefresh || 3000;
-			$scope.showModal = false;
 			
 			app.getAppLayout().then(applayout => {appName = applayout.layout.qTitle;});
 			
@@ -41,6 +40,7 @@ define(["jquery", "qlik", "text!./ReloadTaskButton.css", "text!./template.html",
 				$scope.showReloadError = false;
 				$scope.showSuccess = false;
 				$scope.showFail = false;
+				$scope.showStarted = false;
 			}
 		
 			$scope.confirmReload = function(){
@@ -75,9 +75,10 @@ define(["jquery", "qlik", "text!./ReloadTaskButton.css", "text!./template.html",
 							if ($scope.layout.pWaiting) {
 								$scope.showOverlay = true;
 								$scope.showLoader = true;		
-								console.log("showing loader");
 							} else {
 								$scope.closeModal();
+								$scope.showOverlay = true;
+								$scope.showStarted = true;
 							}
 						waitSessionStatus(sessionId, function(){
 							if ($scope.layout.pWaiting){
@@ -128,7 +129,7 @@ define(["jquery", "qlik", "text!./ReloadTaskButton.css", "text!./template.html",
                             ref : "pTask",
                             type : "string",
                             label : "Task id",
-                            expression : "optional"
+                            expression: "optional"
                         }
                     }
                 }
@@ -140,7 +141,9 @@ define(["jquery", "qlik", "text!./ReloadTaskButton.css", "text!./template.html",
     function waitSessionStatus(sessionId, onSuccess, onFail) {
         getTaskStatus(sessionId, function(stat){
             if (stat == 1 || stat == 2 || stat == 3 || stat == 4 || stat == 5) {
-                setTimeout(waitSessionStatus(sessionId, onSuccess, onFail), 1000);
+                setTimeout(function(){
+					waitSessionStatus(sessionId, onSuccess, onFail)
+				}, 1000);
             } else if (stat == 7) {
 				onSuccess();
 			} else {
