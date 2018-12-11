@@ -4,8 +4,9 @@ Working on published application without user admin roles.
 
 Prerequisites:
   - created reload task
-  - security rule for user to read access for reload tasks
+  - security rule for user to read access for reloadtask*
   - security rule for user to read access for ExecutionResult* and executionsession* resource
+  - security rule for user to read and update application
 
 Configuration:
   - Refresh interval in ms - interval for reload task status check
@@ -13,3 +14,29 @@ Configuration:
   - Waiting to finish reload - application is waiting in "idle" state when reload start if setting is checked
 
 See also Reload Task Status https://github.com/teamEMARK/ReloadTaskStatus
+
+Examples of needed security rules:
+
+```sh
+Resource filter: ExecutionResult*, ExecutionSession*,ReloadTask*
+Action: Read
+```
+![alt text](https://github.com/teamEMARK/ReloadTaskStatus/blob/master/images/RTS_rule.png)
+
+and 
+
+```sh
+Resource filter: App*
+Action: Read, Update
+Condition: (resource.HasPrivilege("read"))
+or 
+Condition: ((user.@AccessArea=resource.stream.@AccessArea)) - if customProperty AccessArea is used for access to streams
+```
+![alt text](https://github.com/teamEMARK/ReloadTaskButton/blob/master/images/RTB_rule.png)
+
+
+
+
+
+
+
