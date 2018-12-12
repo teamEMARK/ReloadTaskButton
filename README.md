@@ -13,6 +13,8 @@ Configuration:
   - Task ID - if field is clear, taskId is detected automatically 
   - Waiting to finish reload - application is waiting in "idle" state when reload start if setting is checked
 
+Please reload application after any configuration chanages.
+
 See also Reload Task Status https://github.com/teamEMARK/ReloadTaskStatus
 
 Examples of needed security rules:
@@ -34,7 +36,8 @@ Condition: ((user.@AccessArea=resource.stream.@AccessArea)) - if customProperty 
 ```
 ![alt text](https://github.com/teamEMARK/ReloadTaskButton/blob/master/images/RTB_rule.png)
 
-
+Demo:
+![alt text](https://github.com/teamEMARK/ReloadTaskStatus/blob/master/images/EMARK_Reload_Task.gif)
 
 
 
