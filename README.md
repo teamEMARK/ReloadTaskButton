@@ -15,6 +15,8 @@ Configuration:
 
 Please reload application after any configuration chanages.
 
+![alt text](https://github.com/teamEMARK/ReloadTaskButton/blob/master/images/settings_button.png)
+
 See also Reload Task Status https://github.com/teamEMARK/ReloadTaskStatus
 
 Examples of needed security rules:
@@ -39,7 +41,8 @@ Condition: ((user.@AccessArea=resource.stream.@AccessArea)) - if customProperty 
 Demo:
 ![alt text](https://github.com/teamEMARK/ReloadTaskStatus/blob/master/images/EMARK_Reload_Task.gif)
 
-
+Application example:
+![alt text](https://github.com/teamEMARK/ReloadTaskStatus/blob/master/images/screenshot.png)
 
 
 
