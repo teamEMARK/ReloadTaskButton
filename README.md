@@ -1,6 +1,6 @@
 # ReloadTaskButton
 Reload task button is Qlik Sense extension for starting qmc reload task directly from application.
-Working on published application without user admin roles.
+Working on published application without user admin roles (user with analyzer license cannot start task).
 
 Prerequisites:
   - created reload task
@@ -44,5 +44,5 @@ Demo:
 Application example:
 ![alt text](https://github.com/teamEMARK/ReloadTaskStatus/blob/master/images/screenshot.png)
 
-
+Tested Qlik Sense Version: Qlik Sense April 2017 and newer
 
