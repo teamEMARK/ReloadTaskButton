@@ -46,3 +46,9 @@ Application example:
 
 Tested Qlik Sense Version: Qlik Sense April 2017 and newer
 
+Supported browsers: 
+   - Chrome 18 and later
+   - Firefox 24 and later
+   - Microsoft Edge
+   - Internet Explorer 11
+    
