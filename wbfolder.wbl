@@ -2,4 +2,5 @@ ReloadTaskButton.qext;
 ReloadTaskButton.js;
 ReloadTaskButton.css;
 template.html;
-modal.html
+modal.html;
+RTB_func.js
