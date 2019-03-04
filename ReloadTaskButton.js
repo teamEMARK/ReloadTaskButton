@@ -31,6 +31,9 @@ define(["jquery", "qlik","./RTB_func", "text!./ReloadTaskButton.css", "text!./te
                 taskId = $scope.layout.pTask;
             }
 			
+			document.getElementById("button").innerHTML = $scope.layout.pButtonText;
+			document.getElementById("button").style.fontSize  = $scope.layout.pButtonTextSize + 'px';
+			
 			$scope.closeModal = function(){
 				$scope.showOverlay = false;
 				$scope.reloadRunning = false;
@@ -117,18 +120,32 @@ define(["jquery", "qlik","./RTB_func", "text!./ReloadTaskButton.css", "text!./te
                             label : "Refresh interval in ms",
                             expression : "optional"
                         },
-						LabelsProp: {
-								ref:"pWaiting",
-								type: "boolean",
-								label: "Waiting to finish reload",
-								defaultValue: true,
-								expression: "optional"
-						},						
+			LabelsProp: {
+				ref:"pWaiting",
+				type: "boolean",
+				label: "Waiting to finish reload",
+				defaultValue: true,
+				expression: "optional"
+			},						
                         TaskProp : {
                             ref : "pTask",
                             type : "string",
                             label : "Task id",
                             expression: "optional"
+                        },
+	                    ButtonText : {
+                            ref : "pButtonText",
+                            type : "string",
+                            label : "Button label",
+                            expression: "optional",
+			    defaultValue: "Reload"
+                        },
+	                    ButtonTextSize : {
+                            ref : "pButtonTextSize",
+                            type : "number",
+                            label : "Button text size in px",
+                            expression: "optional",
+			    defaultValue: 30
                         }
                     }
                 },
@@ -141,7 +158,7 @@ define(["jquery", "qlik","./RTB_func", "text!./ReloadTaskButton.css", "text!./te
 					component: "text"
 				},				
 				version: {
-					label: 'Version: 0.2',
+					label: 'Version: 0.3',
 					component: "text"
 				}					
 			}

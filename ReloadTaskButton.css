@@ -1,4 +1,17 @@
 /* Button design */
+.emark-reload-button .btn-responsive {
+	width: 95%;
+	height: 95%;
+	display:inline-block;
+    font-weight: bold;
+    border: none;
+    color: #fff;
+    background: #4e0a55;
+	text-decoration: none;
+	margin: 2px;
+	border-radius: 0.5rem;
+}
+
 .emark-reload-button .btn  {
 	display:inline-block;
     font-weight: bold;
