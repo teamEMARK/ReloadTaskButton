@@ -31,9 +31,7 @@ define(["jquery", "qlik","./RTB_func", "text!./ReloadTaskButton.css", "text!./te
                 taskId = $scope.layout.pTask;
             }
 			
-			document.getElementById("button").innerHTML = $scope.layout.pButtonText;
-			document.getElementById("button").style.fontSize  = $scope.layout.pButtonTextSize + 'px';
-			
+		
 			$scope.closeModal = function(){
 				$scope.showOverlay = false;
 				$scope.reloadRunning = false;
