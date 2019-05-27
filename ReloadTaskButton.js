@@ -23,7 +23,7 @@ define(["jquery", "qlik","./RTB_func", "text!./ReloadTaskButton.css", "text!./te
 			var appName = "";
             var refreshInterval = $scope.layout.pRefresh || 3000;
 			
-			app.getAppLayout().then(applayout => {appName = applayout.layout.qTitle;});
+			//app.getAppLayout().then(applayout => {appName = applayout.layout.qTitle;});
 			
 			if ($scope.layout.pTask == "") {
                 RTB_func.getReloadTaskId(appId).then(function(id){taskId = id;});
