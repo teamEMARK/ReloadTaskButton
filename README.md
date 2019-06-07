@@ -30,7 +30,7 @@ Action: Read
 and 
 
 ```sh
-Resource filter: App*
+Resource filter: App_*
 Action: Read, Update
 Condition: (resource.HasPrivilege("read"))
 or 
