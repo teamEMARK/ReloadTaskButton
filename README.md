@@ -51,4 +51,5 @@ Supported browsers:
    - Firefox
    - Microsoft Edge
    - Internet Explorer 11
+   
     
